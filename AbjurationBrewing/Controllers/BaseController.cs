@@ -23,7 +23,7 @@ namespace Abjuration.Controllers
 
                         if (untappds.Count > 0)
                         {
-                            model.UpdateUntappd = (untappds[0].UpdateDate.AddMinutes(1) < DateTime.Now);
+                            model.UpdateUntappd = (untappds[0].UpdateDate.AddMinutes(1) < DateTime.UtcNow);
                             model.UntappdHtml = untappds[0].Html;
                         }
                         else

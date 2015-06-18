@@ -17,7 +17,7 @@ namespace Abjuration.Controllers
                 db.Untappds.RemoveRange(db.Untappds);
 
                 var untappd = new Untappd();
-                untappd.UpdateDate = DateTime.Now;
+                untappd.UpdateDate = DateTime.UtcNow;
                 untappd.Html = html;
 
                 db.Untappds.Add(untappd);
