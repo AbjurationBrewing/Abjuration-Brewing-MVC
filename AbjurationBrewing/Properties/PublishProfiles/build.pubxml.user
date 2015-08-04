@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Abjuration.dll">
-      <publishTime>06/18/2015 15:52:30</publishTime>
+      <publishTime>07/28/2015 15:32:33</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>05/19/2015 11:41:02</publishTime>
@@ -277,7 +277,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2015 09:45:26</publishTime>
     </File>
     <File Include="Content/styles.css">
-      <publishTime>05/28/2015 09:56:05</publishTime>
+      <publishTime>07/20/2015 15:35:29</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>07/28/2015 15:31:56</publishTime>
     </File>
     <File Include="Fonts/glyphicons-halflings-regular.eot">
       <publishTime>05/28/2015 09:45:40</publishTime>
@@ -573,8 +576,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/leftovers/showcase-bg.jpg">
       <publishTime>05/28/2015 09:46:56</publishTime>
     </File>
+    <File Include="Images/sort_asc.png">
+      <publishTime>07/20/2015 16:16:51</publishTime>
+    </File>
+    <File Include="Images/sort_asc_disabled.png">
+      <publishTime>07/20/2015 16:16:51</publishTime>
+    </File>
+    <File Include="Images/sort_both.png">
+      <publishTime>07/20/2015 16:16:51</publishTime>
+    </File>
+    <File Include="Images/sort_desc.png">
+      <publishTime>07/20/2015 16:16:51</publishTime>
+    </File>
+    <File Include="Images/sort_desc_disabled.png">
+      <publishTime>07/20/2015 16:16:51</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>06/18/2015 15:22:52</publishTime>
+    </File>
+    <File Include="Scripts/Beers.js">
+      <publishTime>07/20/2015 16:29:43</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>05/28/2015 11:13:12</publishTime>
@@ -652,7 +673,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2015 09:47:25</publishTime>
     </File>
     <File Include="Scripts/global.js">
-      <publishTime>05/28/2015 15:10:35</publishTime>
+      <publishTime>06/18/2015 16:49:34</publishTime>
+    </File>
+    <File Include="Scripts/Home.js">
+      <publishTime>06/18/2015 16:48:48</publishTime>
     </File>
     <File Include="Scripts/instafeed.js">
       <publishTime>05/28/2015 09:47:25</publishTime>
@@ -690,14 +714,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/waypoints.js">
       <publishTime>05/28/2015 09:47:25</publishTime>
     </File>
+    <File Include="Views/Beers/Index.cshtml">
+      <publishTime>07/20/2015 16:28:56</publishTime>
+    </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/28/2015 10:04:32</publishTime>
+      <publishTime>06/18/2015 16:54:16</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>05/19/2015 11:40:43</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/28/2015 14:47:17</publishTime>
+      <publishTime>06/18/2015 16:53:01</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>05/19/2015 11:40:43</publishTime>
@@ -706,7 +733,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2015 11:40:43</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/18/2015 15:35:04</publishTime>
+      <publishTime>07/28/2015 15:22:22</publishTime>
     </File>
   </ItemGroup>
 </Project>

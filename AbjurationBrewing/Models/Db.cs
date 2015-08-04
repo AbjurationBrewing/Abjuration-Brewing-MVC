@@ -33,11 +33,11 @@ namespace Abjuration.Models
 
             modelBuilder.Entity<BeerVersion>()
                 .Property(e => e.OG)
-                .HasPrecision(18, 4);
+                .HasPrecision(18, 3);
 
             modelBuilder.Entity<BeerVersion>()
                 .Property(e => e.FG)
-                .HasPrecision(18, 4);
+                .HasPrecision(18, 3);
 
             modelBuilder.Entity<BeerVersion>()
                 .Property(e => e.SRM)
@@ -52,10 +52,19 @@ namespace Abjuration.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<BeerVersion>()
-                .HasMany(e => e.BeerIterations)
-                .WithRequired(e => e.BeerVersion1)
-                .HasForeignKey(e => new { e.BeerVersion, e.BeerId })
-                .WillCascadeOnDelete(false);
+                .HasMany(e => e.Grains)
+                .WithRequired(e => e.BeerVersion)
+                .HasForeignKey(e => new { e.BeerId, e.VersionNum });
+
+            modelBuilder.Entity<BeerVersion>()
+                .HasMany(e => e.Hops)
+                .WithRequired(e => e.BeerVersion)
+                .HasForeignKey(e => new { e.BeerId, e.VersionNum });
+
+            modelBuilder.Entity<BeerVersion>()
+                .HasMany(e => e.Yeasts)
+                .WithRequired(e => e.BeerVersion)
+                .HasForeignKey(e => new { e.BeerId, e.VersionNum });
 
             modelBuilder.Entity<Grain>()
                 .Property(e => e.GristPercentage)

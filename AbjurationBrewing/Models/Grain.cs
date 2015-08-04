@@ -11,9 +11,15 @@ namespace Abjuration.Models
     {
         public int GrainId { get; set; }
 
+        public int BeerId { get; set; }
+
+        public decimal VersionNum { get; set; }
+
         public decimal? GristPercentage { get; set; }
 
         [StringLength(100)]
         public string Name { get; set; }
+
+        public virtual BeerVersion BeerVersion { get; set; }
     }
 }

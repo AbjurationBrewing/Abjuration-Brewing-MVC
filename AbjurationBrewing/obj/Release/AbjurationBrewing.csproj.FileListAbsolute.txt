@@ -56,10 +56,10 @@ C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjurat
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\bin\System.Web.WebPages.Razor.xml
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\obj\Release\Abjuration.dll
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\obj\Release\Abjuration.pdb
-C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\obj\Release\AbjurationBrewing.csprojResolveAssemblyReference.cache
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\bin\System.Net.Http.Formatting.dll
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\bin\System.Web.Http.dll
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\bin\System.Web.Http.WebHost.dll
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\bin\System.Net.Http.Formatting.xml
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\bin\System.Web.Http.xml
 C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\bin\System.Web.Http.WebHost.xml
+C:\Users\hallamd\Documents\Visual Studio 2012\Projects\AbjurationBrewing\Abjuration-Brewing-MVC\AbjurationBrewing\obj\Release\AbjurationBrewing.csprojResolveAssemblyReference.cache

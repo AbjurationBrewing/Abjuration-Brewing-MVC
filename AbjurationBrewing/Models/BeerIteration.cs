@@ -11,7 +11,7 @@ namespace Abjuration.Models
     {
         [Key]
         [Column(Order = 0)]
-        public decimal BeerVersion { get; set; }
+        public decimal VersionNum { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -19,17 +19,15 @@ namespace Abjuration.Models
         public int BeerId { get; set; }
 
         [Key]
-        [Column("BeerIteration", Order = 2)]
+        [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int BeerIteration1 { get; set; }
+        public int IterationNum { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? BrewDate { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? ReleaseDate { get; set; }
-
-        public virtual BeerVersion BeerVersion1 { get; set; }
 
         public virtual Beer Beer { get; set; }
     }

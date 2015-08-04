@@ -11,17 +11,19 @@ namespace Abjuration.Models
     {
         public BeerVersion()
         {
-            BeerIterations = new HashSet<BeerIteration>();
+            Grains = new HashSet<Grain>();
+            Hops = new HashSet<Hop>();
+            Yeasts = new HashSet<Yeast>();
         }
 
         [Key]
-        [Column("BeerVersion", Order = 0)]
-        public decimal BeerVersion1 { get; set; }
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int BeerId { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int BeerId { get; set; }
+        public decimal VersionNum { get; set; }
 
         public decimal? OG { get; set; }
 
@@ -37,8 +39,12 @@ namespace Abjuration.Models
 
         public string Description { get; set; }
 
-        public virtual ICollection<BeerIteration> BeerIterations { get; set; }
-
         public virtual Beer Beer { get; set; }
+
+        public virtual ICollection<Grain> Grains { get; set; }
+
+        public virtual ICollection<Hop> Hops { get; set; }
+
+        public virtual ICollection<Yeast> Yeasts { get; set; }
     }
 }

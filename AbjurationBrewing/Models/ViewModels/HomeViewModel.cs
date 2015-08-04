@@ -7,6 +7,8 @@ namespace Abjuration.Models
 {
     public class HomeViewModel : BaseViewModel
     {
+        public bool UpdateUntappd { get; set; }
 
+        public string UntappdHtml { get; set; }
     }
 }

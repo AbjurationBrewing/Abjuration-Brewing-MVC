@@ -11,10 +11,16 @@ namespace Abjuration.Models
     {
         public int YeastId { get; set; }
 
+        public int BeerId { get; set; }
+
+        public decimal VersionNum { get; set; }
+
         [StringLength(25)]
         public string Abbreviation { get; set; }
 
         [StringLength(100)]
         public string Name { get; set; }
+
+        public virtual BeerVersion BeerVersion { get; set; }
     }
 }

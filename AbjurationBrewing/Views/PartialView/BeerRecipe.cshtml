@@ -1,0 +1,54 @@
+﻿@model Abjuration.Models.BeerRecipeViewModel
+
+<div id="pop_recipe" style="width:450px">
+    <div class="poplogo"><img src="Images/Abjuration-Brewing-Company.png" alt="ABCo" /></div>
+    <h1 class="recipesHeadline">@Model.BeerVersion.Beer.Abbreviation v1.1</h1>
+    <ul class="recipeList">
+        <li><strong>OG:</strong> @Model.BeerVersion.OG</li>
+        <li><strong>SRM:</strong> @Model.BeerVersion.SRM</li>
+        <li><strong>IBU:</strong> @Model.BeerVersion.IBU</li>
+        <li><strong>ABV:</strong> @Model.BeerVersion.ABV%</li>
+        <li><strong>Boil Time:</strong> @Model.BeerVersion.BoilTime Minutes</li>
+        <li><strong>Release Date:</strong> TODO</li>
+    </ul>
+
+    <strong>Grain</strong>
+    <table style="width:100%" class="recipeTable">
+        @foreach(var grain in Model.BeerVersion.Grains.OrderByDescending(x => x.GristPercentage))
+        {
+            <tr>
+                <td>@grain.GristPercentage%</td>
+                <td>@Html.Raw(grain.Name)</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <strong>Hops</strong>
+    <table style="width:100%" class="recipeTable">
+        @foreach (var hop in Model.BeerVersion.Hops.OrderBy(x => x.Sequence))
+        {
+            <tr>
+                <td class="thirdwidth">@hop.IBU IBUs</td>
+                <td class="thirdwidth">@Html.Raw(hop.Name)</td>
+                <td class="thirdwidth">@hop.AdditionTime</td>
+            </tr>
+        }
+
+    </table>
+    <br />
+    <strong>Yeast</strong>
+    <table style="width:100%" class="recipeTable">
+        @for (var x = 0; x < Model.BeerVersion.Yeasts.Count(); x++)
+        {
+            var list = Model.BeerVersion.Yeasts.ToList()[x];
+            <tr>
+                <td>@list.Abbreviation</td>
+                <td>@Html.Raw(list.Name)</td>
+            </tr>
+            if ((x + 1) < Model.BeerVersion.Yeasts.Count())
+            {
+                <tr><td><i>OR</i></td></tr>
+            }
+        }
+    </table>
+</div>
