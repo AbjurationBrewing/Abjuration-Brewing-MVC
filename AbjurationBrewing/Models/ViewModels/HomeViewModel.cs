@@ -10,5 +10,7 @@ namespace Abjuration.Models
         public bool UpdateUntappd { get; set; }
 
         public string UntappdHtml { get; set; }
+
+        public List<BeerVersion> MainSliderBeers { get; set; }
     }
 }

@@ -12,9 +12,11 @@ namespace Abjuration.Models
         {
         }
 
+        public virtual DbSet<BeerGroup> BeerGroups { get; set; }
         public virtual DbSet<BeerIteration> BeerIterations { get; set; }
         public virtual DbSet<Beer> Beers { get; set; }
         public virtual DbSet<BeerVersion> BeerVersions { get; set; }
+        public virtual DbSet<Error> Errors { get; set; }
         public virtual DbSet<Grain> Grains { get; set; }
         public virtual DbSet<GrainsToBeer> GrainsToBeers { get; set; }
         public virtual DbSet<Hop> Hops { get; set; }
@@ -25,6 +27,10 @@ namespace Abjuration.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BeerGroup>()
+                .Property(e => e.BeerGroupName)
+                .IsUnicode(false);
+
             modelBuilder.Entity<BeerIteration>()
                 .Property(e => e.VersionNum)
                 .HasPrecision(5, 2);
@@ -79,6 +85,11 @@ namespace Abjuration.Models
                 .HasMany(e => e.SpiceOthers)
                 .WithRequired(e => e.BeerVersion)
                 .HasForeignKey(e => new { e.BeerId, e.VersionNum });
+
+            modelBuilder.Entity<BeerVersion>()
+                .HasMany(e => e.BeerGroups)
+                .WithMany(e => e.BeerVersions)
+                .Map(m => m.ToTable("BeerVersionsInGroups", "abjurationUser").MapLeftKey(new[] { "BeerId", "VersionNum" }).MapRightKey("BeerGroupId"));
 
             modelBuilder.Entity<BeerVersion>()
                 .HasMany(e => e.Yeasts)

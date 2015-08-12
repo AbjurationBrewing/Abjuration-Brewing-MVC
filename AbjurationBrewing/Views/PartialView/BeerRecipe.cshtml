@@ -2,14 +2,14 @@
 
 <div id="pop_recipe" style="width:450px">
     <div class="poplogo"><img src="Images/Abjuration-Brewing-Company.png" alt="ABCo" /></div>
-    <h1 class="recipesHeadline">@Model.BeerVersion.Beer.Abbreviation v1.1</h1>
+    <h1 class="recipesHeadline">@Model.BeerVersion.Beer.Abbreviation v@(Model.FormattedVersion)</h1>
     <ul class="recipeList">
         <li><strong>OG:</strong> @Model.BeerVersion.OG</li>
         <li><strong>SRM:</strong> @Model.BeerVersion.SRM</li>
         <li><strong>IBU:</strong> @Model.BeerVersion.IBU</li>
         <li><strong>ABV:</strong> @Model.BeerVersion.ABV%</li>
         <li><strong>Boil Time:</strong> @Model.BeerVersion.BoilTime Minutes</li>
-        <li><strong>Release Date:</strong> TODO</li>
+        <li><strong>Release Date:</strong> @(@Model.BeerVersion.Beer.BeerIterations.First().ReleaseDate != null ? ((DateTime)Model.BeerVersion.Beer.BeerIterations.First().ReleaseDate).ToString("MM/dd/yy") : "")</li> @* TODO *@
     </ul>
 
     <strong>Grain/Sugar</strong>
@@ -33,7 +33,6 @@
                 <td class="thirdwidth">@hop.AdditionTime</td>
             </tr>
         }
-
     </table>
     <br />
     <strong>Yeast</strong>

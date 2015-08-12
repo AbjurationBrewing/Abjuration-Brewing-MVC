@@ -64,11 +64,6 @@ $(document).ready(function () {
     });
     feed.run();
 
-    $('.openRecipeLink').click(function () {
-        openRecipe($(this).closest('li').find('h1').attr('id'));
-        return false;
-    });
-
     var beer = $.trim(getQueryStringValue('beer'));
 
     if (beer != '') {
@@ -81,9 +76,10 @@ $(document).ready(function () {
     }
 });
 
-function openRecipe(name) {
+function openRecipe(beerId, version) {
     $.fancybox({
-        'href': '#pop_' + name,
+        'href': '/PartialView/BeerRecipe?beerId=' + beerId + '&version=' + version,
+        'type': 'ajax',
         'closeOnEscape': true,
         'autoScale': true,
         'transitionIn': 'elastic',

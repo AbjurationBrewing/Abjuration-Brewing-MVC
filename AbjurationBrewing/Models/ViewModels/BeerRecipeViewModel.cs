@@ -9,5 +9,6 @@ namespace Abjuration.Models
     {
         public BeerVersion BeerVersion { get; set; }
         public List<decimal> BeerVersions { get; set; }
+        public string FormattedVersion { get; set; }
     }
 }
