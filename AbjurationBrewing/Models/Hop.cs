@@ -9,22 +9,16 @@ namespace Abjuration.Models
     [Table("abjurationUser.Hops")]
     public partial class Hop
     {
-        public int HopId { get; set; }
+        public Hop()
+        {
+            HopsToBeers = new HashSet<HopsToBeer>();
+        }
 
-        public int BeerId { get; set; }
-
-        public decimal VersionNum { get; set; }
-
-        [StringLength(100)]
-        public string Name { get; set; }
-
-        public decimal? IBU { get; set; }
-
-        public int? Sequence { get; set; }
+        public short HopId { get; set; }
 
         [StringLength(50)]
-        public string AdditionTime { get; set; }
+        public string Name { get; set; }
 
-        public virtual BeerVersion BeerVersion { get; set; }
+        public virtual ICollection<HopsToBeer> HopsToBeers { get; set; }
     }
 }

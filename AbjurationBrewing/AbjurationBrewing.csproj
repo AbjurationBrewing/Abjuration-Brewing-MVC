@@ -155,9 +155,11 @@
     <Compile Include="Models\BeerVersion.cs" />
     <Compile Include="Models\DataTableParamModel.cs" />
     <Compile Include="Models\Db.cs" />
-    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\Grain.cs" />
+    <Compile Include="Models\GrainsToBeer.cs" />
     <Compile Include="Models\Hop.cs" />
+    <Compile Include="Models\HopsToBeer.cs" />
+    <Compile Include="Models\SpiceOther.cs" />
     <Compile Include="Models\Untappd.cs" />
     <Compile Include="Models\ViewModels\BaseViewModel.cs" />
     <Compile Include="Models\ViewModels\BeersViewModel.cs" />

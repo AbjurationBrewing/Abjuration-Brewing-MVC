@@ -15,7 +15,7 @@ namespace Abjuration
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            //AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
@@ -25,32 +25,7 @@ namespace Abjuration
 
         protected void Application_Error(object sender, EventArgs e)
         {
-            Exception exception = Server.GetLastError().GetBaseException();
-            HttpContext context = HttpContext.Current;
-            string errorMessage = "";
-            string url = "";
-
-            for (Exception eCurrent = exception; eCurrent != null; eCurrent = eCurrent.InnerException)
-            {
-                errorMessage += "Message: " + eCurrent.Message + "\r\nSource: " + eCurrent.Source + "\r\nStack Trace: " + eCurrent.StackTrace;
-                errorMessage += "\r\n";
-            }
-
-            if (context != null && context.Request != null && context.Request.Url != null)
-            {
-                url = context.Request.Url.ToString();
-            }
-
-            var error = new Error();
-            error.ErrorDetail = errorMessage;
-            error.ErrorIn = url;
-            error.ErrorOn = DateTime.UtcNow;
-
-            using (var db = new Db())
-            {
-                db.Errors.Add(error);
-                db.SaveChanges();
-            }
+            
         }
     }
 }

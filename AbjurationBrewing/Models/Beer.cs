@@ -17,7 +17,7 @@ namespace Abjuration.Models
 
         public int BeerId { get; set; }
 
-        [StringLength(255)]
+        [StringLength(75)]
         public string Name { get; set; }
 
         [StringLength(10)]

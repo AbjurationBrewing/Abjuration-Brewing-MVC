@@ -6,12 +6,13 @@ namespace Abjuration.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("abjurationUser.BeerIterations")]
-    public partial class BeerIteration
+    [Table("abjurationUser.GrainsToBeers")]
+    public partial class GrainsToBeer
     {
         [Key]
         [Column(Order = 0)]
-        public decimal VersionNum { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public short GrainId { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -20,15 +21,12 @@ namespace Abjuration.Models
 
         [Key]
         [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public short IterationNum { get; set; }
+        public decimal VersionNum { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? BrewDate { get; set; }
+        public decimal? GristPercentage { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? ReleaseDate { get; set; }
+        public virtual BeerVersion BeerVersion { get; set; }
 
-        public virtual Beer Beer { get; set; }
+        public virtual Grain Grain { get; set; }
     }
 }

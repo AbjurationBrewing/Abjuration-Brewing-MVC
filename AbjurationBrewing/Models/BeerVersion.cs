@@ -11,8 +11,9 @@ namespace Abjuration.Models
     {
         public BeerVersion()
         {
-            Grains = new HashSet<Grain>();
-            Hops = new HashSet<Hop>();
+            GrainsToBeers = new HashSet<GrainsToBeer>();
+            HopsToBeers = new HashSet<HopsToBeer>();
+            SpiceOthers = new HashSet<SpiceOther>();
             Yeasts = new HashSet<Yeast>();
         }
 
@@ -35,15 +36,17 @@ namespace Abjuration.Models
 
         public decimal? ABV { get; set; }
 
-        public int? BoilTime { get; set; }
+        public short? BoilTime { get; set; }
 
         public string Description { get; set; }
 
         public virtual Beer Beer { get; set; }
 
-        public virtual ICollection<Grain> Grains { get; set; }
+        public virtual ICollection<GrainsToBeer> GrainsToBeers { get; set; }
 
-        public virtual ICollection<Hop> Hops { get; set; }
+        public virtual ICollection<HopsToBeer> HopsToBeers { get; set; }
+
+        public virtual ICollection<SpiceOther> SpiceOthers { get; set; }
 
         public virtual ICollection<Yeast> Yeasts { get; set; }
     }

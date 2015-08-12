@@ -9,18 +9,19 @@ namespace Abjuration.Models
     [Table("abjurationUser.Yeasts")]
     public partial class Yeast
     {
-        public int YeastId { get; set; }
+        public Yeast()
+        {
+            BeerVersions = new HashSet<BeerVersion>();
+        }
 
-        public int BeerId { get; set; }
+        public short YeastId { get; set; }
 
-        public decimal VersionNum { get; set; }
-
-        [StringLength(25)]
+        [StringLength(10)]
         public string Abbreviation { get; set; }
 
-        [StringLength(100)]
+        [StringLength(50)]
         public string Name { get; set; }
 
-        public virtual BeerVersion BeerVersion { get; set; }
+        public virtual ICollection<BeerVersion> BeerVersions { get; set; }
     }
 }

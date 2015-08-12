@@ -11,7 +11,6 @@ namespace Abjuration.Models
     {
         public int UntappdId { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime UpdateDate { get; set; }
 
         public string Html { get; set; }

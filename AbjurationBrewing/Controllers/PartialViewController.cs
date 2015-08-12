@@ -24,9 +24,12 @@ namespace Abjuration.Controllers
             {
                 model.BeerVersion = db.BeerVersions
                     .Include(x => x.Beer)
-                    .Include(x => x.Grains)
-                    .Include(x => x.Hops)
+                    .Include(x => x.GrainsToBeers)
+                    .Include("GrainsToBeers.Grain")
+                    .Include(x => x.HopsToBeers)
+                    .Include("HopsToBeers.Hop")
                     .Include(x => x.Yeasts)
+                    .Include(x => x.SpiceOthers)
                     .Where(x => x.BeerId == beerId && x.VersionNum == version).FirstOrDefault();
 
                 model.BeerVersions = db.BeerVersions.Where(x => x.BeerId == beerId).Select(x => x.VersionNum).ToList();

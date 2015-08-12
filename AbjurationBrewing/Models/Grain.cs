@@ -9,17 +9,16 @@ namespace Abjuration.Models
     [Table("abjurationUser.Grains")]
     public partial class Grain
     {
-        public int GrainId { get; set; }
+        public Grain()
+        {
+            GrainsToBeers = new HashSet<GrainsToBeer>();
+        }
 
-        public int BeerId { get; set; }
+        public short GrainId { get; set; }
 
-        public decimal VersionNum { get; set; }
-
-        public decimal? GristPercentage { get; set; }
-
-        [StringLength(100)]
+        [StringLength(50)]
         public string Name { get; set; }
 
-        public virtual BeerVersion BeerVersion { get; set; }
+        public virtual ICollection<GrainsToBeer> GrainsToBeers { get; set; }
     }
 }
