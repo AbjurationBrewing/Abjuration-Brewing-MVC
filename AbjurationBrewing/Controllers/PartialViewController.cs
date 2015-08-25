@@ -15,7 +15,7 @@ namespace Abjuration.Controllers
             return View();
         }
 
-        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
+        [OutputCache(Duration = 600, VaryByParam = "*")]
         public ActionResult BeerRecipe(int beerId, decimal version)
         {
             var model = new BeerRecipeViewModel();
