@@ -11,10 +11,10 @@ namespace Abjuration.Models
     {
         public BeerVersion()
         {
+            BeerVersionsInGroups = new HashSet<BeerVersionsInGroup>();
             GrainsToBeers = new HashSet<GrainsToBeer>();
             HopsToBeers = new HashSet<HopsToBeer>();
             SpiceOthers = new HashSet<SpiceOther>();
-            BeerGroups = new HashSet<BeerGroup>();
             Yeasts = new HashSet<Yeast>();
         }
 
@@ -43,13 +43,13 @@ namespace Abjuration.Models
 
         public virtual Beer Beer { get; set; }
 
+        public virtual ICollection<BeerVersionsInGroup> BeerVersionsInGroups { get; set; }
+
         public virtual ICollection<GrainsToBeer> GrainsToBeers { get; set; }
 
         public virtual ICollection<HopsToBeer> HopsToBeers { get; set; }
 
         public virtual ICollection<SpiceOther> SpiceOthers { get; set; }
-
-        public virtual ICollection<BeerGroup> BeerGroups { get; set; }
 
         public virtual ICollection<Yeast> Yeasts { get; set; }
     }

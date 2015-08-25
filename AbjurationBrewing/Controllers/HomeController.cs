@@ -28,9 +28,12 @@ namespace Abjuration.Controllers
                     model.UpdateUntappd = true;
                 }
 
-                model.MainSliderBeers = db.BeerVersions
+                model.MainSliderBeers = db.BeerVersionsInGroups
+                    .Where(x => x.BeerGroup.BeerGroupName == "MainSlider")
+                    .OrderBy(x => x.Sequnce)
+                    .Select(x => x.BeerVersion)
                     .Include(x => x.Beer)
-                    .Where(x => x.BeerGroups.Any(y => y.BeerGroupName == "MainSlider")).ToList();
+                    .ToList();
             }
 
             return View(model);

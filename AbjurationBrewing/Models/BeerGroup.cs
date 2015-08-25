@@ -11,7 +11,7 @@ namespace Abjuration.Models
     {
         public BeerGroup()
         {
-            BeerVersions = new HashSet<BeerVersion>();
+            BeerVersionsInGroups = new HashSet<BeerVersionsInGroup>();
         }
 
         public short BeerGroupId { get; set; }
@@ -19,6 +19,6 @@ namespace Abjuration.Models
         [StringLength(25)]
         public string BeerGroupName { get; set; }
 
-        public virtual ICollection<BeerVersion> BeerVersions { get; set; }
+        public virtual ICollection<BeerVersionsInGroup> BeerVersionsInGroups { get; set; }
     }
 }

@@ -154,6 +154,7 @@
     <Compile Include="Models\BeerGroup.cs" />
     <Compile Include="Models\BeerIteration.cs" />
     <Compile Include="Models\BeerVersion.cs" />
+    <Compile Include="Models\BeerVersionsInGroup.cs" />
     <Compile Include="Models\DataTableParamModel.cs" />
     <Compile Include="Models\Db.cs" />
     <Compile Include="Models\Error.cs" />

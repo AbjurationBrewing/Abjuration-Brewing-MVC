@@ -16,6 +16,7 @@ namespace Abjuration.Models
         public virtual DbSet<BeerIteration> BeerIterations { get; set; }
         public virtual DbSet<Beer> Beers { get; set; }
         public virtual DbSet<BeerVersion> BeerVersions { get; set; }
+        public virtual DbSet<BeerVersionsInGroup> BeerVersionsInGroups { get; set; }
         public virtual DbSet<Error> Errors { get; set; }
         public virtual DbSet<Grain> Grains { get; set; }
         public virtual DbSet<GrainsToBeer> GrainsToBeers { get; set; }
@@ -72,6 +73,11 @@ namespace Abjuration.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<BeerVersion>()
+                .HasMany(e => e.BeerVersionsInGroups)
+                .WithRequired(e => e.BeerVersion)
+                .HasForeignKey(e => new { e.BeerId, e.VersionNum });
+
+            modelBuilder.Entity<BeerVersion>()
                 .HasMany(e => e.GrainsToBeers)
                 .WithRequired(e => e.BeerVersion)
                 .HasForeignKey(e => new { e.BeerId, e.VersionNum });
@@ -87,14 +93,13 @@ namespace Abjuration.Models
                 .HasForeignKey(e => new { e.BeerId, e.VersionNum });
 
             modelBuilder.Entity<BeerVersion>()
-                .HasMany(e => e.BeerGroups)
-                .WithMany(e => e.BeerVersions)
-                .Map(m => m.ToTable("BeerVersionsInGroups", "abjurationUser").MapLeftKey(new[] { "BeerId", "VersionNum" }).MapRightKey("BeerGroupId"));
-
-            modelBuilder.Entity<BeerVersion>()
                 .HasMany(e => e.Yeasts)
                 .WithMany(e => e.BeerVersions)
                 .Map(m => m.ToTable("YeastsToBeers", "abjurationUser").MapLeftKey(new[] { "BeerId", "VersionNum" }).MapRightKey("YeastId"));
+
+            modelBuilder.Entity<BeerVersionsInGroup>()
+                .Property(e => e.VersionNum)
+                .HasPrecision(5, 2);
 
             modelBuilder.Entity<Grain>()
                 .Property(e => e.Name)
