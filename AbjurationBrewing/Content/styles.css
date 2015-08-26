@@ -1364,7 +1364,10 @@ Social Media Div
 
 }
 .socialMediaDiv .untappdWrapperDiv {
+    width: 360px;
     height: 600px;
+    background-color: white;
+    border-radius: 5px;
    /* margin-left: 30px; */
     position: relative;
 }
@@ -1373,26 +1376,17 @@ Social Media Div
     border-radius: 5px;
     margin-left: 10px;
 }
-.socialPaddingUT {
-    width: 360px;
-    position:relative;
-    top:-5px;
-    width: 360px;
-    border-radius: 5px;
-    background-color: white;
-}
 
 .socialPaddingFB {
 	margin: 0px 31px 20px -10px;
     position:relative;
     top:-5px;
-    width: 360px;
-    border-radius: 5px;
+    width:360px;
 }
 
 .socialPaddingTW {
+     width: 360px;
 	margin: 0px 20px 0px 0px;
-    width: 360px;
 }
 
 @media screen and (max-width: 480px) {

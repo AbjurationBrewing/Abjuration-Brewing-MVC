@@ -277,7 +277,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2015 09:45:26</publishTime>
     </File>
     <File Include="Content/styles.css">
-      <publishTime>08/26/2015 10:10:15</publishTime>
+      <publishTime>08/26/2015 10:18:51</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>07/28/2015 15:31:56</publishTime>
@@ -724,7 +724,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/20/2015 16:28:56</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/26/2015 10:09:31</publishTime>
+      <publishTime>08/26/2015 10:17:51</publishTime>
     </File>
     <File Include="Views/PartialView/BeerRecipe.cshtml">
       <publishTime>08/25/2015 09:19:30</publishTime>
