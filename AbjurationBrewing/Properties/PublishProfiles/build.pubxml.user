@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Abjuration.dll">
-      <publishTime>08/25/2015 12:25:59</publishTime>
+      <publishTime>08/26/2015 09:41:31</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>05/19/2015 11:41:02</publishTime>
@@ -277,7 +277,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2015 09:45:26</publishTime>
     </File>
     <File Include="Content/styles.css">
-      <publishTime>08/25/2015 10:47:53</publishTime>
+      <publishTime>08/26/2015 10:10:15</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>07/28/2015 15:31:56</publishTime>
@@ -724,7 +724,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/20/2015 16:28:56</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/25/2015 09:31:43</publishTime>
+      <publishTime>08/26/2015 10:09:31</publishTime>
     </File>
     <File Include="Views/PartialView/BeerRecipe.cshtml">
       <publishTime>08/25/2015 09:19:30</publishTime>
@@ -742,7 +742,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/19/2015 11:40:43</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/25/2015 12:28:12</publishTime>
+      <publishTime>08/26/2015 10:11:29</publishTime>
     </File>
   </ItemGroup>
 </Project>
