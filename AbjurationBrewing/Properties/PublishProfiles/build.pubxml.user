@@ -277,7 +277,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2015 09:45:26</publishTime>
     </File>
     <File Include="Content/styles.css">
-      <publishTime>08/26/2015 10:18:51</publishTime>
+      <publishTime>08/26/2015 12:48:59</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>07/28/2015 15:31:56</publishTime>
@@ -679,10 +679,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2015 09:47:25</publishTime>
     </File>
     <File Include="Scripts/global.js">
-      <publishTime>06/18/2015 16:49:34</publishTime>
+      <publishTime>08/26/2015 13:41:46</publishTime>
     </File>
     <File Include="Scripts/Home.js">
-      <publishTime>08/12/2015 16:08:33</publishTime>
+      <publishTime>08/26/2015 12:22:05</publishTime>
     </File>
     <File Include="Scripts/instafeed.js">
       <publishTime>05/28/2015 09:47:25</publishTime>
@@ -724,7 +724,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/20/2015 16:28:56</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/26/2015 10:17:51</publishTime>
+      <publishTime>08/26/2015 12:41:44</publishTime>
     </File>
     <File Include="Views/PartialView/BeerRecipe.cshtml">
       <publishTime>08/25/2015 09:19:30</publishTime>

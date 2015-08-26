@@ -4,10 +4,9 @@ $(document).ready(function () {
             'href': '#ageConfirmDiv',
             'modal': true,
             'closeOnEscape': false,
-            'autoScale': true,
-            'transitionIn': 'elastic',
-            'transitionOut': 'elastic',
-            'centerOnScroll': true
+            'autoSize': true,
+            'autoResize': true,
+            'autoCenter': true
         });
 
         $('#ageNo').on('click', function (event) {

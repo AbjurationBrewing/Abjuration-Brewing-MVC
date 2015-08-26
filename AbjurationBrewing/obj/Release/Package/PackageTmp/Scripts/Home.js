@@ -42,7 +42,7 @@ $(document).ready(function () {
                     $('.untappdDiv').append(html);
                 });
 
-                $.post('Ajax/UpdateUntappd', { html: $('.untappdWrapperDiv').html() });
+                $.post('Ajax/UpdateUntappd', { html: $('.socialPaddingUT').html() });
             }
             else {
                 // error
@@ -52,7 +52,7 @@ $(document).ready(function () {
         });
     }
     else {
-        $('.untappdWrapperDiv').html('').append($('#updateUntappdHtml').val());
+        $('.socialPaddingUT').html('').append($('#updateUntappdHtml').val());
     }
 
     var feed = new Instafeed({

@@ -1357,47 +1357,31 @@ Social Media Div
     width:100%;
 }
 .socialMediaDiv div {
-    /*float: left;*/
    display:inline-block; 
 }
-.socialMediaDiv iframe {
-
-}
-.socialMediaDiv .untappdWrapperDiv {
-    width: 360px;
-    height: 600px;
-    background-color: white;
+.socialMediaDiv {
     border-radius: 5px;
-   /* margin-left: 30px; */
     position: relative;
 }
-.fb-like-box {
-    background-color: white;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
 .socialPaddingFB {
-	margin: 0px 31px 20px -10px;
-    position:relative;
-    top:-5px;
-    width:360px;
+	margin: 0px 20px 20px 0px;
+    position: relative;
+    top:-3px;
+    width: 340px;
 }
-
 .socialPaddingTW {
-     width: 360px;
+    width: 340px;
 	margin: 0px 20px 0px 0px;
 }
-
 @media screen and (max-width: 480px) {
     .socialPaddingTW {
         margin-bottom: 20px;
     }
 }
-
-.socialPaddingUT {   
-    position:relative;
-    top:-7px;
+.socialPaddingUT {
+    top: -25px;
+    position: relative;
+    width: 340px;
 }
 
 /*
@@ -1405,6 +1389,10 @@ Make the Facebook Like box responsive (fluid width)
 https://developers.facebook.com/docs/reference/plugins/like-box/
 */
  
+.fb-like-box {
+    border-radius: 5px;
+}
+
 /* This element holds injected scripts inside iframes that in some cases may stretch layouts. So hiding it. */
 #fb-root {
   display: none;
@@ -1427,7 +1415,7 @@ Untappd
     padding: 5px;
     background: #e8e8e8;
     position: absolute; 
-    bottom: 0; 
+    bottom: -20px; 
     left: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -1451,6 +1439,7 @@ Untappd
     overflow-y: scroll;
     overflow-x: hidden;
     height: 513px;
+    background-color: white;
 }
 .untappdDiv hr {
     margin-top: 10px;
@@ -1461,14 +1450,14 @@ Untappd
     width: 50px;
 }
 .untappdAvatarWrapper {
-    margin-right: 10px;
+    margin-right: 5px;
     height: 50px;
     width: 50px;
     float: left;
 }
 .untappdText {
     float: left;
-    width: 265px;
+    width: 255px;
 }
 .breweryImage {
     height: 50px;
